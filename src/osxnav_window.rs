@@ -6,7 +6,7 @@ use cacao::objc::{msg_send, sel, sel_impl, class};
 use cacao::objc::runtime::Object;
 use cacao::view::View;
 use core_graphics::display::CGRect;
-use cacao::foundation::{NSArray, nil, YES, NO, NSString, NSInteger, NSUInteger};
+use cacao::foundation::{nil, YES, NO};
 use crate::draw::draw_grid;
 
 

@@ -3,18 +3,15 @@ use std::thread::sleep;
 use std::time::Duration;
 use cacao::foundation::NSUInteger;
 use cacao::image::{DrawConfig, ImageView};
-use cacao::objc::{msg_send, sel, sel_impl, class};
-use cacao::macos::{App, AppDelegate, Event, EventMask, EventModifierFlag, EventMonitor};
+use cacao::objc::{msg_send, sel, sel_impl};
+use cacao::macos::{App, AppDelegate, Event, EventMask, EventMonitor};
 use cacao::macos::window::Window;
 use cacao::notification_center::Dispatcher;
-use cacao::objc::runtime::Object;
 use cacao::utils::CGSize;
 use core_graphics::base::CGFloat;
 use core_graphics::display::{CGPoint, CGRect};
 use core_graphics::event::{CGEvent, CGEventFlags, CGEventTapLocation, CGEventType, CGMouseButton};
 use core_graphics::event_source::{CGEventSource, CGEventSourceStateID};
-use core_graphics::image::CGImageRef;
-use core_graphics::sys::CGImage;
 use crate::draw::draw_grid;
 use crate::osxnav::{dispatch, Key};
 use crate::osxnav_window::OsxNavWindow;
@@ -80,9 +77,6 @@ impl Dispatcher for OsxNavApp {
                 },
                 Key::L => {
                     reposition_grid(&delegate.image_view, [(1., 0.), (shift_effect, 0.)]);
-                },
-                Key::RETURN => {
-                    send_click(&delegate.image_view)
                 },
                 Key::RETURN => {
                     send_click(&delegate.image_view)

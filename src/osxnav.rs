@@ -2,10 +2,7 @@ use std::sync::{Arc, RwLock};
 use cacao::foundation::NSUInteger;
 use cacao::lazy_static::lazy_static;
 use cacao::macos::App;
-use core_graphics::base::CGFloat;
-use core_graphics::display::CGPoint;
-use core_graphics::event::{CGEvent, CGEventType, CGMouseButton, CGKeyCode, KeyCode, CGEventTapLocation, CGEventFlags};
-use core_graphics::event_source::{CGEventSource, CGEventSourceStateID};
+use core_graphics::event::CGEventFlags;
 use crate::OsxNavApp;
 
 #[derive(Clone, Debug)]

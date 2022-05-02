@@ -1,11 +1,5 @@
 use cacao::image::{DrawConfig, Image};
 use core_graphics::base::CGFloat;
-use core_graphics::context::CGContextRef;
-
-pub fn draw_line(context: &CGContextRef, x1: f64, y1: f64, x2: f64, y2: f64) {
-    context.move_to_point(x1, y1);
-    context.add_line_to_point(x2, y2);
-}
 
 pub fn draw_grid(
     config: DrawConfig,
